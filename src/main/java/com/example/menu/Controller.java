@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class Controller {
     @FXML
@@ -16,34 +17,41 @@ public class Controller {
     public Button Menu;
     public HBox hbox1;
     public VBox vbox1;
+    public StackPane stackpane1;
+    public Circle circulo;
 
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
     @FXML
     public void vista1(){
-        hbox1.setTranslateX(+2);
-
+        circulo.setFill(Color.RED);
+        salir();
     }
     @FXML
     public void vista2(){
-        hbox1.setTranslateX(+2);
-
+        circulo.setFill(Color.GREEN);
+        salir();
     }
     @FXML
     public void vista3(){
-        hbox1.setTranslateX(+2);
-
+        circulo.setFill(Color.BLUE);
+        salir();
     }
     @FXML
     public void salir(){
-        vbox1.setVisible(false);
+        Menu.setTranslateX(0);
+        vista1.setTranslateX(-100);
+        vista2.setTranslateX(-100);
+        vista3.setTranslateX(-100);
+        salir.setTranslateX(-100);
+        hbox1.setVisible(true);
 
     }
     @FXML
     public void menu(){
-        vbox1.setVisible(true);
-
-    }}
+        Menu.setTranslateX(100);
+        vista1.setTranslateX(100);
+        vista2.setTranslateX(100);
+        vista3.setTranslateX(100);
+        salir.setTranslateX(100);
+        hbox1.setVisible(false);
+    }
+}
