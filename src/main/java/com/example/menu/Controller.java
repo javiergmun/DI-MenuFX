@@ -3,6 +3,7 @@ package com.example.menu;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -19,6 +20,7 @@ public class Controller {
     public VBox vbox1;
     public StackPane stackpane1;
     public Circle circulo;
+    public ImageView imagenLogo;
 
     @FXML
     public void vista1(){
@@ -35,15 +37,16 @@ public class Controller {
     @FXML
     public void salir(){
         Menu.setTranslateX(0);
-        vbox1.setTranslateX(-62);
+        vbox1.setTranslateX(-75);
         stackpane1.setTranslateX(0);
         hbox1.setVisible(true);
     }
     @FXML
     public void menu(){
         Menu.setTranslateX(100);
-        vbox1.setTranslateX(62);
+        vbox1.setTranslateX(75);
         stackpane1.setTranslateX(20);
+        imagenLogo.setVisible(false);
         hbox1.setVisible(false);
     }
 }
