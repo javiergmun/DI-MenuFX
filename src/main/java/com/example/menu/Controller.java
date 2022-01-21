@@ -23,35 +23,27 @@ public class Controller {
     @FXML
     public void vista1(){
         circulo.setFill(Color.RED);
-        salir();
     }
     @FXML
     public void vista2(){
         circulo.setFill(Color.GREEN);
-        salir();
     }
     @FXML
     public void vista3(){
         circulo.setFill(Color.BLUE);
-        salir();
     }
     @FXML
     public void salir(){
         Menu.setTranslateX(0);
-        vista1.setTranslateX(-100);
-        vista2.setTranslateX(-100);
-        vista3.setTranslateX(-100);
-        salir.setTranslateX(-100);
+        vbox1.setTranslateX(-62);
+        stackpane1.setTranslateX(0);
         hbox1.setVisible(true);
-
     }
     @FXML
     public void menu(){
         Menu.setTranslateX(100);
-        vista1.setTranslateX(100);
-        vista2.setTranslateX(100);
-        vista3.setTranslateX(100);
-        salir.setTranslateX(100);
+        vbox1.setTranslateX(62);
+        stackpane1.setTranslateX(20);
         hbox1.setVisible(false);
     }
 }
