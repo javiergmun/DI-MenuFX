@@ -56,7 +56,7 @@ public class ControllerPrincipal {
 
     public void cargarDetalle(ActionEvent actionEvent) {
         FXMLLoader loader = new FXMLLoader(ControllerPrincipal.class.getResource("vistaCargarDetalles.fxml"));
-        loader.setVisible(true);
+
 
     }
 }
