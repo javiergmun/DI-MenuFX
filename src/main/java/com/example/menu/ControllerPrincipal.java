@@ -9,6 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ControllerPrincipal {
     @FXML
@@ -42,7 +45,7 @@ public class ControllerPrincipal {
         imagenLogo.setVisible(true);
         vbox1.setTranslateX(-75);
         stackpane1.setTranslateX(0);
-        hbox1.setVisible(true);
+        //hbox1.setVisible(true);
 
     }
     @FXML
@@ -51,12 +54,7 @@ public class ControllerPrincipal {
         vbox1.setTranslateX(75);
         stackpane1.setTranslateX(20);
         imagenLogo.setVisible(false);
-        hbox1.setVisible(false);
+        //hbox1.setVisible(false);
     }
 
-    public void cargarDetalle(ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(ControllerPrincipal.class.getResource("vistaCargarDetalles.fxml"));
-
-
-    }
 }
