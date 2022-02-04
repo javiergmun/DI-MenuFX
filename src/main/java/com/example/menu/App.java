@@ -14,6 +14,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Locale localizacion = new Locale("en", "UK");
+        //Locale localizacion = new Locale("es", "ES");
         ResourceBundle resourceBundle = ResourceBundle.getBundle("com.example.menu.i18n.strings", localizacion);
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("vistaPrincipal.fxml"),resourceBundle);
 
