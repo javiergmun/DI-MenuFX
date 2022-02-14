@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="vistaDetalle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.ControllerDetalle">
+   <children>
+      <AnchorPane fx:id="anchorpane" layoutX="-18.0" layoutY="176.0" prefHeight="175.0" prefWidth="370.0" visible="false">
+         <children>
+            <Label fx:id="nombreLabel" layoutX="154.0" layoutY="37.0" text="Nombre" />
+            <Label fx:id="emailLabel" layoutX="162.0" layoutY="108.0" text="Email" />
+            <TextField fx:id="nombreTF" editable="false" layoutX="102.0" layoutY="63.0" />
+            <TextField fx:id="emailTF" editable="false" layoutX="102.0" layoutY="132.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
