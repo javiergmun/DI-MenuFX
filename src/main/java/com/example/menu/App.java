@@ -19,8 +19,9 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("vistaPrincipal.fxml"),resourceBundle);
 
         Scene scene = new Scene(fxmlLoader.load(), 540, 350);
-        stage.setTitle("Javier Gonzalez");
+        stage.setTitle("Interfaz de Javier Gonzalez");
         stage.setScene(scene);
+        scene.getStylesheets().add("com.example.menu/estilos/apariencia1.css");
         stage.setResizable(false);
         stage.show();
     }
