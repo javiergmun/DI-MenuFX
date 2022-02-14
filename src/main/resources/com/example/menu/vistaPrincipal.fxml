@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,26 +9,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="529.0" style="-fx-background-color: GREY;" stylesheets="@estilos/apariencia1.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.ControllerPrincipal">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="529.0" style="-fx-background-color: #c45f3c;" stylesheets="@estilos/apariencia1.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menu.ControllerPrincipal">
+
    <children>
       <Button fx:id="botonMenu" layoutX="2.0" layoutY="3.0" mnemonicParsing="false" onAction="#menu" prefHeight="32.0" prefWidth="53.0" stylesheets="@estilos/apariencia1.css" text="%button.menu" />
       <VBox fx:id="vbox1" layoutX="-98.0" prefHeight="352.0" prefWidth="98.0" stylesheets="@estilos/apariencia1.css">
          <children>
-            <Button fx:id="vista1" mnemonicParsing="false" onAction="#vista1" prefHeight="32.0" prefWidth="100.0" styleClass="vista1" stylesheets="@estilos/apariencia1.css" text="%button.persona1" />
-            <Button fx:id="vista2" mnemonicParsing="false" onAction="#vista2" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.persona2" />
-            <Button fx:id="vista3" mnemonicParsing="false" onAction="#vista3" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.persona3" />
-            <Button fx:id="salir" mnemonicParsing="false" onAction="#salir" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.salir">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
+            <Button id="vistaPersona1" fx:id="vistaPersona1" mnemonicParsing="false" onAction="#vista1" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.persona1" />
+            <Button fx:id="vistaPersona2" mnemonicParsing="false" onAction="#vista2" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.persona2" />
+            <Button fx:id="vistaPersona3" mnemonicParsing="false" onAction="#vista3" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.persona3" />
+            <Button fx:id="botonSalir" mnemonicParsing="false" onAction="#salir" prefHeight="32.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css" text="%button.salir">
                <VBox.margin>
                   <Insets top="220.0" />
                </VBox.margin></Button>
          </children>
       </VBox>
-      <StackPane fx:id="stackpane1" layoutX="57.0" prefHeight="352.0" prefWidth="484.0" style="-fx-background-color: WHITE;">
+      <StackPane fx:id="stackpane1" layoutX="57.0" prefHeight="352.0" prefWidth="484.0" style="-fx-background-color: #e9ce98;">
+         <fx:include fx:id="vistaDetalle" source="vistaDetalle.fxml" visible="true" />
          <children>
-            <fx:include fx:id="vistaAnidada" source="vistaCargarDetalles.fxml" visible="false" />
             <ImageView fx:id="imagenLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_RIGHT">
                <image>
                   <Image url="@DI-MenuFX/images/logo1.png" />
@@ -38,19 +35,20 @@
                   <Insets right="185.0" top="195.0" />
                </StackPane.margin>
             </ImageView>
+
             <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@estilos/apariencia1.css">
                <children>
                   <ImageView fx:id="photo" fitHeight="113.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="https://www.seekpng.com/png/small/87-872219_lupa-icon.png" />
-                     </image>
                      <VBox.margin>
                         <Insets left="160.0" top="30.0" />
                      </VBox.margin>
+                     <image>
+                        <Image url="@DI-MenuFX/images/lupa.png" />
+                     </image>
                   </ImageView>
-                  <Button fx:id="cargarDetalle" alignment="CENTER" mnemonicParsing="false" stylesheets="@estilos/apariencia1.css" text="%button.cargarDetalle">
+                  <Button fx:id="cargarDetalle" alignment="CENTER" mnemonicParsing="false" onAction="#detalle" stylesheets="@estilos/apariencia1.css" text="%button.cargarDetalle">
                      <VBox.margin>
-                        <Insets left="170.0" top="20.0" />
+                        <Insets left="180.0" top="20.0" />
                      </VBox.margin></Button>
                </children>
             </VBox>

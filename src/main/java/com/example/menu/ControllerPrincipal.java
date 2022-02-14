@@ -13,13 +13,13 @@ import javafx.util.Duration;
 
 public class ControllerPrincipal {
     @FXML
-    public Button vista1;
+    public Button vistaPersona1;
     @FXML
-    public Button vista2;
+    public Button vistaPersona2;
     @FXML
-    public Button vista3;
+    public Button vistaPersona3;
     @FXML
-    public Button salir;
+    public Button botonSalir;
     @FXML
     public Button botonMenu;
     @FXML
@@ -36,29 +36,34 @@ public class ControllerPrincipal {
     public Rectangle rectanguloLimiteIzda;
     private Animation movimiento1;
     @FXML
-    private ControllerCargarDetalles controllerCargarDetalles;
+    public ControllerDetalle controllerDetalle;
 
     @FXML
     public void vista1(){
+        //insertar vista 1
         photo.setImage(new Image("https://www.theportlandclinic.com/wp-content/uploads/2019/07/Person-Curtis_4x5-e1564616444404-300x300.jpg"));
     }
     @FXML
     public void vista2(){
+        //insertar vista 2
         photo.setImage(new Image("https://architecture.ou.edu/wp-content/uploads/2018/07/ANGELAPERSON-1447-300x300.jpg"));
     }
     @FXML
     public void vista3(){
+        //insertar vista 3
         photo.setImage(new Image("https://www.lse.ac.uk/international-relations/assets/images/people-pages/PSS/sherwood-andrew-300x300.jpg"));
     }
     @FXML
     public void salir(){
-        photo.setImage(new Image("https://www.seekpng.com/png/small/87-872219_lupa-icon.png"));
         imagenLogo.setTranslateY(0);
         botonMenu.setTranslateY(0);
         vbox1.setTranslateX(0);
         stackpane1.setTranslateX(0);
     }
-
+    @FXML
+    public void detalle(){
+        controllerDetalle.moverDetalle();
+    }
     //ANIMACIÓN DISEÑADA PARA CUALQUIER BOTON, SOLO CAMBIAR EL TRANSLATE Y EL LIMITE CON EL QUE CHOCA :)
     @FXML
     public void menu(){
